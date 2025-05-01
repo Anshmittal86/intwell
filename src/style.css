@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+nav .mobile-menu {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  nav .mobile-menu {
+    display: block;
+    position: relative;
+    z-index: 1111;
+  }
+
+  nav ul {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 30%;
+    right: 0;
+    bottom: 0;
+    transition: 0.3s;
+    z-index: 1000;
+    background-color: #f0f0f0;
+    color: #222;
+    padding: 5rem 2rem 2rem;
+    font-size: 1.5rem;
+    backdrop-filter: blur(5px);
+    transform: translateX(100%);
+  }
+
+  nav.active ul {
+    transform: translateX(0);
+  }
+
+  nav ul li a:hover {
+    color: rgb(243, 102, 243);
+  }
+  nav ul li:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  nav .mobile-menu .close-button {
+    display: none;
+  }
+
+  nav.active .mobile-menu .close-button {
+    display: block;
+  }
+
+  nav.active .mobile-menu .humburger-icon {
+    display: none;
+  }
+}
