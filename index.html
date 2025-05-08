@@ -150,6 +150,7 @@
               <input
                 type="name"
                 id="name"
+                name="name"
                 class="shadow-sm border border-slate-900 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="John Doe"
                 required
@@ -162,6 +163,7 @@
               <input
                 type="email"
                 id="email"
+                name="email"
                 class="shadow-sm border border-slate-900 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 placeholder="name@flowbite.com"
                 required
@@ -173,7 +175,8 @@
               >
               <input
                 type="text"
-                id="subject"
+                id="mobile-no"
+                name="mobile-no"
                 class="block p-3 w-full text-md text-gray-900 border border-slate-900 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500"
                 placeholder="+91 1234567890"
                 required
@@ -185,6 +188,7 @@
               >
               <textarea
                 id="message"
+                name="message"
                 rows="6"
                 class="block p-2.5 w-full text-md text-gray-900 rounded-lg border border-slate-900 shadow-sm focus:ring-primary-500 focus:border-primary-500 resize-none"
                 placeholder="Leave a message..."
@@ -293,6 +297,11 @@
         </div>
       </div>
     </footer>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
 
     <script type="module" src="./src/main.js"></script>
   </body>
