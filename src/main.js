@@ -3,7 +3,7 @@ const mobileMenuIcon = document.querySelector('#mobile-menu');
 const navbarEl = document.querySelector('nav');
 
 // Get Services
-fetch('../intwell.json')
+fetch('/intwell.json')
   .then((response) => response.json())
   .then((data) => {
     const services = data.services;
