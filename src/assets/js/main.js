@@ -1,3 +1,5 @@
+import '../css/output.css';
+
 const servicesContainerEl = document.querySelector('#services-container');
 const mobileMenuIcon = document.querySelector('#mobile-menu');
 const navbarEl = document.querySelector('nav');

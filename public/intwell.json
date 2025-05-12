@@ -2,39 +2,51 @@
   "services": [
     {
       "id": 1,
-      "image": "https://img.icons8.com/?size=100&id=116827&format=png",
+      "image": "./icons/app-development.png",
       "service": "Web Development",
       "description": "We craft responsive, high-performing websites tailored to your business needs. Leveraging modern technologies, we ensure seamless user experiences across all devices."
     },
     {
       "id": 2,
-      "image": "https://img.icons8.com/?size=100&id=lBuqhXfGV2RT&format=png",
+      "image": "./icons/ui-design.png",
       "service": "UI/UX Design",
       "description": "Our designs prioritize user engagement and intuitive navigation. We create visually appealing interfaces that enhance user satisfaction and drive conversions."
     },
     {
       "id": 3,
-      "image": "https://img.icons8.com/?size=100&id=xtnIDXkBb0sK&format=png",
+      "image": "./icons/seo.png",
       "service": "SEO Optimization",
       "description": "Enhancing your website's visibility through strategic keyword integration and content optimization. We aim to improve search engine rankings and attract targeted traffic."
     },
     {
       "id": 4,
-      "image": "https://img.icons8.com/?size=100&id=23608&format=png",
+      "image": "./icons/remote-access.png",
       "service": "Web Accessibility",
       "description": "Ensuring your website is accessible to all users, including those with disabilities. We adhere to WCAG guidelines to promote inclusivity and compliance."
     },
     {
       "id": 5,
-      "image": "https://img.icons8.com/?size=160&id=saSupsgVcmJe&format=png",
+      "image": "./icons/integration.png",
       "service": "AI Integration",
       "description": "Incorporating AI solutions to automate tasks and personalize user experiences. We help you stay ahead by integrating intelligent features into your web platforms."
     },
     {
       "id": 6,
-      "image": "https://img.icons8.com/?size=100&id=25224&format=png",
+      "image": "./icons/updating.png",
       "service": "Website Updates",
       "description": "Providing regular updates to keep your website current and secure. We ensure optimal performance by implementing the latest features and security patches."
+    },
+    {
+      "id": 7,
+      "image": "./icons/svg.png",
+      "service": "Domain Name Registration",
+      "description": "Secure your online identity with our domain registration services. We help you find the perfect domain name and manage renewals with ease and reliability."
+    },
+    {
+      "id": 8,
+      "image": "./icons/hosting.png",
+      "service": "Website Hosting",
+      "description": "Reliable and fast website hosting solutions to ensure your site is always accessible. We offer scalable plans with top-tier security and performance."
     }
   ]
 }

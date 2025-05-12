@@ -31,9 +31,6 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- CSS file link -->
-    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body class="bg-white text-gray-800">
     <!-- Header -->
@@ -101,36 +98,39 @@
     </header>
 
     <!-- Main Content -->
-    <main class="w-full mx-auto px-4 max-w-[1200px] min-h-screen">
+    <main class="w-full mx-auto px-4 max-w-[1200px] min-h-screen overflow-hidden">
       <!-- Hero Section -->
       <section
-        class="text-center mx-auto h-full flex items-center justify-center flex-col mt-44 mb-48"
+        class="text-center mx-auto h-full flex items-center justify-center flex-col mt-44 mb-32 md:mb-48"
         id="hero"
         aria-label="hero-section"
       >
-        <h1 class="sm:text-6xl text-3xl font-extrabold mb-6">
+        <h1 class="sm:text-6xl text-4xl font-extrabold mb-6">
           We build Websites<br />
           That Build Your Business
         </h1>
-        <p class="text-xl text-gray-600 max-w-2xl">
+        <p class="text-md sm:text-lg md:text-xl text-gray-600 max-w-2xl">
           Building dreams into reality to connect you through the internet. Bring your business to
           the forefront so that everyone can connect with you.
         </p>
-        <button
-          class="bg-purple-400 hover:bg-purple-600 hover:cursor-pointer transition text-white font-bold py-2 px-4 rounded-md mt-9 text-lg"
+        <a
+          href="#contact"
+          class="bg-purple-500 hover:bg-purple-700 hover:cursor-pointer transition text-white font-bold py-2 px-4 rounded-md mt-9 text-lg"
         >
           Start a Project
-        </button>
+        </a>
       </section>
 
       <!-- About section  -->
       <section
-        class="mx-auto h-full lg:flex lg:justify-between mb-40"
+        class="mx-auto h-full lg:flex lg:justify-between mb-32 md:mb-40"
         id="about"
         aria-label="about-section"
       >
-        <h2 class="text-6xl font-bold mb-6">About US</h2>
-        <div class="md:max-w-3xl w-full text-justify text-xl leading-normal">
+        <h2 class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500">
+          About US.
+        </h2>
+        <div class="md:max-w-3xl w-full text-justify text-md sm:text-lg md:text-xl leading-normal">
           <p class="mb-10">
             At WebDev Agency, we believe that a great website is the cornerstone of every successful
             business. We are a team of passionate designers, developers, and strategists who
@@ -141,8 +141,12 @@
             scalable technology. From simple landing pages to complex e-commerce platforms, we
             deliver with precision, creativity, and care.
           </p>
-          <h3 class="text-3xl font-bold my-6">Why Choose Us :</h3>
-          <ul class="list-disc list-inside ml-4 text-lg">
+          <h3
+            class="text-xl sm:text-2xl md:text-3xl font-bold my-6 underline decoration-purple-500"
+          >
+            Why Choose Us:
+          </h3>
+          <ul class="list-disc list-inside ml-4 text-md sm:text-lg md:text-xl">
             <li>Clean, modern, and mobile-first design</li>
             <li>Personalized solutions tailored to your business</li>
             <li>Proven results in performance and user experience</li>
@@ -152,8 +156,10 @@
       </section>
 
       <!-- Services Section -->
-      <section class="mx-auto h-full mb-40" id="services" aria-label="services-section">
-        <h2 class="text-6xl font-bold mb-12">Services</h2>
+      <section class="mx-auto h-full mb-32 md:mb-40" id="services" aria-label="services-section">
+        <h2 class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500">
+          Services.
+        </h2>
 
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-4 flex-wrap h-auto"
@@ -163,8 +169,11 @@
         </div>
       </section>
 
+      <!-- Contact Section -->
       <section class="flex flex-col" id="contact" aria-label="contact-section">
-        <h2 class="text-6xl font-bold mb-10">Contact</h2>
+        <h2 class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500">
+          Contact.
+        </h2>
 
         <div class="px-4 sm:flex w-full sm:items-center sm:justify-between gap-5">
           <form action="#" class="space-y-8 mb-4 w-full sm:w-1/2" id="contact-form">
@@ -270,11 +279,22 @@
       aria-label="footer-section"
     >
       <div class="mx-auto max-w-screen-xl">
-        <div class="md:flex md:justify-between">
+        <div class="sm:flex sm:gap-3.5 sm:justify-between">
           <div class="mb-6 md:mb-0">
             <a href="#header" class="flex items-center">
               <span class="self-center text-2xl font-semibold whitespace-nowrap"> IntWell</span>
             </a>
+          </div>
+          <div class="w-full sm:w-96 mb-5 sm:mb-0">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.1591577576455!2d77.72802807436925!3d29.453362475226633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1b002726e857%3A0x22ac890be61f9dd4!2sAmit%20vihar%20kukra.%20Muzaffarnagar!5e0!3m2!1sen!2sin!4v1746783412627!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
@@ -312,6 +332,7 @@
             </div>
           </div>
         </div>
+
         <hr class="my-6 border-purple-200 sm:mx-auto lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
           <span class="text-sm text-gray-500 sm:text-center"
@@ -328,6 +349,6 @@
     ></script>
 
     <!-- Main script -->
-    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/assets/js/main.js"></script>
   </body>
 </html>
