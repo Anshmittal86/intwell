@@ -19,9 +19,9 @@
     <title>Intwell Web Development | Modern Websites & Custom Web Solutions</title>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./public/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./public/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./public/favicons/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Google Fonts -->
@@ -33,39 +33,248 @@
     />
   </head>
   <body class="bg-white text-gray-800">
-    <!-- Header -->
-    <header
-      class="w-full bg-purple-600 text-white py-4 px-10 shadow-md fixed top-0 z-50"
-      id="header"
-      aria-label="header-section"
-    >
-      <div class="container mx-auto flex items-center justify-between max-w-[1200px]">
-        <a href="#" class="text-2xl font-bold uppercase">IntWell</a>
+    <div id="main">
+      <div id="content">
+        <!-- Header -->
+        <header
+          class="w-full bg-purple-600 text-white py-4 px-10 shadow-md fixed top-0 z-50"
+          id="header"
+          aria-label="header-section"
+        >
+          <div class="container mx-auto flex items-center justify-between max-w-[1200px]">
+            <a href="#" class="text-2xl font-bold uppercase">IntWell</a>
 
-        <nav class="flex">
-          <!-- Mobile Menu Icons -->
-          <div class="mobile-menu cursor-pointer" id="mobile-menu">
-            <div class="humburger-icon">
-              <svg
-                class="w-6 h-6 text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-width="2"
-                  d="M5 7h14M5 12h14M5 17h14"
-                />
-              </svg>
+            <nav class="flex">
+              <!-- Mobile Menu Icons -->
+              <div class="mobile-menu cursor-pointer" id="mobile-menu">
+                <div class="humburger-icon">
+                  <svg
+                    class="w-6 h-6 text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-width="2"
+                      d="M5 7h14M5 12h14M5 17h14"
+                    />
+                  </svg>
+                </div>
+                <div class="close-button">
+                  <svg
+                    class="w-6 h-6 text-gray-800"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Navigation Menu -->
+              <ul class="space-x-8 text-lg flex">
+                <li><a href="#hero" class="hover:text-slate-200 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-slate-200 transition">About</a></li>
+                <li>
+                  <a href="#services" class="hover:text-slate-200 transition">Services</a>
+                </li>
+                <li><a href="#contact" class="hover:text-slate-200 transition">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="w-full mx-auto px-4 max-w-[1200px] min-h-screen overflow-hidden">
+          <!-- Hero Section -->
+          <section
+            class="text-center mx-auto h-full flex items-center justify-center flex-col mt-44 mb-32 md:mb-48 trigger-line-animation"
+            id="hero"
+            aria-label="hero-section"
+          >
+            <div class="w-fit overflow-hidden mb-6">
+              <h1 class="sm:text-6xl text-4xl font-extrabold line-animation mb-2">
+                We build Websites
+              </h1>
+              <h1 class="sm:text-6xl text-4xl font-extrabold line-animation">
+                That Build Your Business
+              </h1>
             </div>
-            <div class="close-button">
+
+            <div class="w-fit overflow-hidden leading-none">
+              <p class="text-md sm:text-lg md:text-xl text-gray-600 max-w-2xl line-animation">
+                Building dreams into reality to connect you through the internet. Bring your
+                business to the forefront so that everyone can connect with you.
+              </p>
+            </div>
+
+            <a
+              href="#contact"
+              class="bg-purple-500 hover:bg-purple-700 hover:cursor-pointer transition text-white font-bold py-2 px-4 rounded-md mt-9 text-lg"
+            >
+              Start a Project
+            </a>
+          </section>
+
+          <!-- About section  -->
+          <section
+            class="mx-auto h-full lg:flex lg:justify-between mb-32 md:mb-40 trigger-line-animation"
+            id="about"
+            aria-label="about-section"
+          >
+            <div class="w-fit overflow-hidden leading-none underline decoration-purple-500">
+              <h2 class="sm:text-6xl text-4xl font-bold mb-6 line-animation">About US.</h2>
+            </div>
+            <div
+              class="md:max-w-3xl w-full text-justify text-md sm:text-lg md:text-xl leading-normal"
+            >
+              <div class="w-fit overflow-hidden leading-none">
+                <p class="mb-10 line-animation">
+                  At WebDev Agency, we believe that a great website is the cornerstone of every
+                  successful business. We are a team of passionate designers, developers, and
+                  strategists who specialize in building custom websites that not only look amazing
+                  but also perform. With a client-first approach, we focus on understanding your
+                  unique business goals to craft digital solutions that drive results. Our mission
+                  is to help businesses of all sizes create a strong online presence through modern
+                  design, responsive development, and scalable technology. From simple landing pages
+                  to complex e-commerce platforms, we deliver with precision, creativity, and care.
+                </p>
+              </div>
+              <h3
+                class="text-xl sm:text-2xl md:text-3xl font-bold my-6 underline decoration-purple-500"
+              >
+                Why Choose Us:
+              </h3>
+              <ul class="list-disc list-inside ml-4 text-md sm:text-lg md:text-xl">
+                <li>Clean, modern, and mobile-first design</li>
+                <li>Personalized solutions tailored to your business</li>
+                <li>Proven results in performance and user experience</li>
+                <li>Cost-effective pricing</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Services Section -->
+          <section
+            class="mx-auto h-full mb-32 md:mb-40"
+            id="services"
+            aria-label="services-section"
+          >
+            <h2 class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500">
+              Services.
+            </h2>
+
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-4 flex-wrap h-auto"
+              id="services-container"
+            >
+              <!-- Services are loaded here -->
+            </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section class="flex flex-col" id="contact" aria-label="contact-section">
+            <h2 class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500">
+              Contact.
+            </h2>
+
+            <div class="px-4 sm:flex w-full sm:items-center sm:justify-between gap-5">
+              <form action="#" class="space-y-8 mb-4 w-full sm:w-1/2" id="contact-form">
+                <div class="mb-5">
+                  <label for="name" class="block mb-2 text-sm font-medium text-gray-900"
+                    >Name :</label
+                  >
+                  <input
+                    type="name"
+                    id="name"
+                    name="name"
+                    class="shadow-sm border border-slate-900 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                    placeholder="John Doe"
+                    required
+                  />
+                </div>
+                <div class="mb-5">
+                  <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
+                    >Email :</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="shadow-sm border border-slate-900 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                    placeholder="name@flowbite.com"
+                    required
+                  />
+                </div>
+                <div class="mb-5">
+                  <label for="phoneNo" class="block mb-2 text-sm font-medium text-gray-900"
+                    >Mobile No :</label
+                  >
+                  <input
+                    type="text"
+                    id="mobile-no"
+                    name="mobile-no"
+                    class="block p-3 w-full text-md text-gray-900 border border-slate-900 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500"
+                    placeholder="+91 1234567890"
+                    required
+                  />
+                </div>
+                <div class="mb-5">
+                  <label for="message" class="block mb-2 text-sm font-medium text-gray-900"
+                    >Your message :</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    class="block p-2.5 w-full text-md text-gray-900 rounded-lg border border-slate-900 shadow-sm focus:ring-primary-500 focus:border-primary-500 resize-none"
+                    placeholder="Leave a message..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="py-3 w-full sm:w-fit px-5 text-md font-medium text-center text-slate-900 rounded-lg bg-primary-700 hover:cursor-pointer hover:bg-purple-500 hover:text-white transition border border-slate-900 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+                >
+                  Send message
+                </button>
+              </form>
+
+              <!-- Google Map -->
+              <div
+                class="w-full sm:w-1/2 h-[500px] rounded-lg border border-purple-950 overflow-auto"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3473.1836167857273!2d77.6947485092552!3d29.481840544907335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1b82ce377ff3%3A0x33d9851b0431db65!2sAxis%20Institute%20And%20Intwell%20Web%20Development%2C%20143%20ROORKEE%20ROAD%2C%20SH%2059%2C%20Rampuri%2C%20Muzaffarnagar%2C%20Uttar%20Pradesh%20251001!5e0!3m2!1sen!2sin!4v1746005176083!5m2!1sen!2sin"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+
+            <a
+              href="#header"
+              class="my-20 px-4 py-2 bg-purple-500 text-white text-lg rounded-lg self-end flex gap-1 items-center hover:bg-purple-600 hover:cursor-pointer transition"
+              >Back to Top
               <svg
-                class="w-6 h-6 text-gray-800"
+                class="w-6 h-6 text-gray-800 dark:text-white up-arrow"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -78,274 +287,121 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  d="M12 6v13m0-13 4 4m-4-4-4 4"
                 />
               </svg>
-            </div>
-          </div>
-
-          <!-- Navigation Menu -->
-          <ul class="space-x-8 text-lg flex">
-            <li><a href="#hero" class="hover:text-slate-200 transition">Home</a></li>
-            <li><a href="#about" class="hover:text-slate-200 transition">About</a></li>
-            <li>
-              <a href="#services" class="hover:text-slate-200 transition">Services</a>
-            </li>
-            <li><a href="#contact" class="hover:text-slate-200 transition">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="w-full mx-auto px-4 max-w-[1200px] min-h-screen overflow-hidden">
-      <!-- Hero Section -->
-      <section
-        class="text-center mx-auto h-full flex items-center justify-center flex-col mt-44 mb-32 md:mb-48"
-        id="hero"
-        aria-label="hero-section"
-      >
-        <h1 class="sm:text-6xl text-4xl font-extrabold mb-6">
-          We build Websites<br />
-          That Build Your Business
-        </h1>
-        <p class="text-md sm:text-lg md:text-xl text-gray-600 max-w-2xl">
-          Building dreams into reality to connect you through the internet. Bring your business to
-          the forefront so that everyone can connect with you.
-        </p>
-        <a
-          href="#contact"
-          class="bg-purple-500 hover:bg-purple-700 hover:cursor-pointer transition text-white font-bold py-2 px-4 rounded-md mt-9 text-lg"
-        >
-          Start a Project
-        </a>
-      </section>
-
-      <!-- About section  -->
-      <section
-        class="mx-auto h-full lg:flex lg:justify-between mb-32 md:mb-40"
-        id="about"
-        aria-label="about-section"
-      >
-        <h2 class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500">
-          About US.
-        </h2>
-        <div class="md:max-w-3xl w-full text-justify text-md sm:text-lg md:text-xl leading-normal">
-          <p class="mb-10">
-            At WebDev Agency, we believe that a great website is the cornerstone of every successful
-            business. We are a team of passionate designers, developers, and strategists who
-            specialize in building custom websites that not only look amazing but also perform. With
-            a client-first approach, we focus on understanding your unique business goals to craft
-            digital solutions that drive results. Our mission is to help businesses of all sizes
-            create a strong online presence through modern design, responsive development, and
-            scalable technology. From simple landing pages to complex e-commerce platforms, we
-            deliver with precision, creativity, and care.
-          </p>
-          <h3
-            class="text-xl sm:text-2xl md:text-3xl font-bold my-6 underline decoration-purple-500"
-          >
-            Why Choose Us:
-          </h3>
-          <ul class="list-disc list-inside ml-4 text-md sm:text-lg md:text-xl">
-            <li>Clean, modern, and mobile-first design</li>
-            <li>Personalized solutions tailored to your business</li>
-            <li>Proven results in performance and user experience</li>
-            <li>Cost-effective pricing</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section class="mx-auto h-full mb-32 md:mb-40" id="services" aria-label="services-section">
-        <h2 class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500">
-          Services.
-        </h2>
-
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-4 flex-wrap h-auto"
-          id="services-container"
-        >
-          <!-- Services are loaded here -->
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="flex flex-col" id="contact" aria-label="contact-section">
-        <h2 class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500">
-          Contact.
-        </h2>
-
-        <div class="px-4 sm:flex w-full sm:items-center sm:justify-between gap-5">
-          <form action="#" class="space-y-8 mb-4 w-full sm:w-1/2" id="contact-form">
-            <div class="mb-5">
-              <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name :</label>
-              <input
-                type="name"
-                id="name"
-                name="name"
-                class="shadow-sm border border-slate-900 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                placeholder="John Doe"
-                required
-              />
-            </div>
-            <div class="mb-5">
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
-                >Email :</label
-              >
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="shadow-sm border border-slate-900 text-gray-900 text-md rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
-                placeholder="name@flowbite.com"
-                required
-              />
-            </div>
-            <div class="mb-5">
-              <label for="phoneNo" class="block mb-2 text-sm font-medium text-gray-900"
-                >Mobile No :</label
-              >
-              <input
-                type="text"
-                id="mobile-no"
-                name="mobile-no"
-                class="block p-3 w-full text-md text-gray-900 border border-slate-900 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500"
-                placeholder="+91 1234567890"
-                required
-              />
-            </div>
-            <div class="mb-5">
-              <label for="message" class="block mb-2 text-sm font-medium text-gray-900"
-                >Your message :</label
-              >
-              <textarea
-                id="message"
-                name="message"
-                rows="6"
-                class="block p-2.5 w-full text-md text-gray-900 rounded-lg border border-slate-900 shadow-sm focus:ring-primary-500 focus:border-primary-500 resize-none"
-                placeholder="Leave a message..."
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="py-3 w-full sm:w-fit px-5 text-md font-medium text-center text-slate-900 rounded-lg bg-primary-700 hover:cursor-pointer hover:bg-purple-500 hover:text-white transition border border-slate-900 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
-            >
-              Send message
-            </button>
-          </form>
-
-          <!-- Google Map -->
-          <div class="w-full sm:w-1/2 h-[500px] rounded-lg border border-purple-950 overflow-auto">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3473.1836167857273!2d77.6947485092552!3d29.481840544907335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1b82ce377ff3%3A0x33d9851b0431db65!2sAxis%20Institute%20And%20Intwell%20Web%20Development%2C%20143%20ROORKEE%20ROAD%2C%20SH%2059%2C%20Rampuri%2C%20Muzaffarnagar%2C%20Uttar%20Pradesh%20251001!5e0!3m2!1sen!2sin!4v1746005176083!5m2!1sen!2sin"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              class="w-full h-full"
-            ></iframe>
-          </div>
-        </div>
-
-        <a
-          href="#header"
-          class="my-20 px-4 py-2 bg-purple-500 text-white text-lg rounded-lg self-end flex gap-1 items-center hover:bg-purple-600 hover:cursor-pointer transition"
-          >Back to Top
-          <svg
-            class="w-6 h-6 text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 6v13m0-13 4 4m-4-4-4 4"
-            />
-          </svg>
-        </a>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer
-      class="p-4 bg-white sm:p-6 border border-t-purple-200"
-      id="footer"
-      aria-label="footer-section"
-    >
-      <div class="mx-auto max-w-screen-xl">
-        <div class="sm:flex sm:gap-3.5 sm:justify-between">
-          <div class="mb-6 md:mb-0">
-            <a href="#header" class="flex items-center">
-              <span class="self-center text-2xl font-semibold whitespace-nowrap"> IntWell</span>
             </a>
-          </div>
-          <div class="w-full sm:w-96 mb-5 sm:mb-0">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.1591577576455!2d77.72802807436925!3d29.453362475226633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1b002726e857%3A0x22ac890be61f9dd4!2sAmit%20vihar%20kukra.%20Muzaffarnagar!5e0!3m2!1sen!2sin!4v1746783412627!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-              <h3 class="mb-6 text-sm font-semibold uppercase">Address</h3>
-              <address class="text-gray-600 not-italic">
-                143 Top Floor, <br />
-                Roorkee Road, <br />
-                Muzaffarnagar - 251001 <br />
-                Uttar Pradesh India
-              </address>
-            </div>
-            <div>
-              <h3 class="mb-6 text-sm font-semibold uppercase">Contact</h3>
-              <ul class="text-gray-600">
-                <li class="mb-4">
-                  <a href="mailto:intwelldevelopment@gmail.com" class="hover:underline"
-                    >intwelldevelopment<br />@gmail.com</a
-                  >
-                </li>
-                <li>
-                  <a href="tel:+91 8791473908" class="hover:underline">+91 8791473908</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="mb-6 text-sm font-semibold uppercase">Legal</h3>
-              <ul class="text-gray-600">
-                <li class="mb-4">
-                  <a href="#" class="hover:underline">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+          </section>
+        </main>
 
-        <hr class="my-6 border-purple-200 sm:mx-auto lg:my-8" />
-        <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center"
-            >© 2025 <a href="#hero" class="hover:underline">IntWell™</a>. All Rights Reserved.
-          </span>
-        </div>
+        <!-- Footer -->
+        <footer
+          class="p-4 bg-white sm:p-6 border border-t-purple-200"
+          id="footer"
+          aria-label="footer-section"
+        >
+          <div class="mx-auto max-w-screen-xl">
+            <div class="sm:flex sm:gap-3.5 sm:justify-between">
+              <div class="mb-6 md:mb-0">
+                <a href="#header" class="flex items-center">
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap"> IntWell</span>
+                </a>
+              </div>
+              <div class="w-full sm:w-96 mb-5 sm:mb-0">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.1591577576455!2d77.72802807436925!3d29.453362475226633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1b002726e857%3A0x22ac890be61f9dd4!2sAmit%20vihar%20kukra.%20Muzaffarnagar!5e0!3m2!1sen!2sin!4v1746783412627!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                  <h3 class="mb-6 text-sm font-semibold uppercase">Address</h3>
+                  <address class="text-gray-600 not-italic">
+                    143 Top Floor, <br />
+                    Roorkee Road, <br />
+                    Muzaffarnagar - 251001 <br />
+                    Uttar Pradesh India
+                  </address>
+                </div>
+                <div>
+                  <h3 class="mb-6 text-sm font-semibold uppercase">Contact</h3>
+                  <ul class="text-gray-600">
+                    <li class="mb-4">
+                      <a href="mailto:intwelldevelopment@gmail.com" class="hover:underline"
+                        >intwelldevelopment<br />@gmail.com</a
+                      >
+                    </li>
+                    <li>
+                      <a href="tel:+91 8791473908" class="hover:underline">+91 8791473908</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="mb-6 text-sm font-semibold uppercase">Legal</h3>
+                  <ul class="text-gray-600">
+                    <li class="mb-4">
+                      <a href="#" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-6 border-purple-200 sm:mx-auto lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+              <span class="text-sm text-gray-500 sm:text-center"
+                >© 2025 <a href="#hero" class="hover:underline">IntWell™</a>. All Rights Reserved.
+              </span>
+            </div>
+          </div>
+        </footer>
       </div>
-    </footer>
+    </div>
 
     <!-- EmailJS script -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <!-- GSAP script -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- ScrollSmoother script -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"
+      integrity="sha512-t4hwZimhnCKT3YLAsEcAcRDkngVFfCcUIfNLIjklrIZAZKD+GfQMP7HbRcsVHxNS48WRBSywNU1uSM2zzLQt1Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- ScrollTrigger script -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- SplitText script -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"
+      integrity="sha512-wOeEC+9qERAzhliwBFPDb6t8TiFFxdxG8vhK/Ygs7TuC44bpg8pg/X2/U/u+0X4fK05wb9id1EIipnF02+CFQw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
 
     <!-- Main script -->
