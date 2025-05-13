@@ -42,7 +42,9 @@
           aria-label="header-section"
         >
           <div class="container mx-auto flex items-center justify-between max-w-[1200px]">
-            <a href="#" class="text-2xl font-bold uppercase">IntWell</a>
+            <a href="/">
+              <img src="./icons/intwell_logo.png" alt="Intwell Web Development Logo" width="120" />
+            </a>
 
             <nav class="flex">
               <!-- Mobile Menu Icons -->
@@ -116,7 +118,7 @@
               </h1>
             </div>
 
-            <div class="w-fit overflow-hidden leading-none">
+            <div class="w-fit overflow-hidden leading-none mb-6">
               <p class="text-md sm:text-lg md:text-xl text-gray-600 max-w-2xl line-animation">
                 Building dreams into reality to connect you through the internet. Bring your
                 business to the forefront so that everyone can connect with you.
@@ -125,7 +127,7 @@
 
             <a
               href="#contact"
-              class="bg-purple-500 hover:bg-purple-700 hover:cursor-pointer transition text-white font-bold py-2 px-4 rounded-md mt-9 text-lg"
+              class="inline-block bg-purple-500 hover:bg-purple-700 transition text-white font-bold py-2 px-4 rounded-md text-xl"
             >
               Start a Project
             </a>
@@ -155,32 +157,39 @@
                   to complex e-commerce platforms, we deliver with precision, creativity, and care.
                 </p>
               </div>
-              <h3
-                class="text-xl sm:text-2xl md:text-3xl font-bold my-6 underline decoration-purple-500"
-              >
-                Why Choose Us:
-              </h3>
-              <ul class="list-disc list-inside ml-4 text-md sm:text-lg md:text-xl">
-                <li>Clean, modern, and mobile-first design</li>
-                <li>Personalized solutions tailored to your business</li>
-                <li>Proven results in performance and user experience</li>
-                <li>Cost-effective pricing</li>
-              </ul>
+              <div class="w-fit overflow-hidden leading-none">
+                <h3
+                  class="text-xl sm:text-2xl md:text-3xl font-bold my-6 underline decoration-purple-500 line-animation"
+                >
+                  Why Choose Us:
+                </h3>
+              </div>
+              <div class="w-fit overflow-hidden leading-none">
+                <ul class="list-disc list-inside ml-4 text-md sm:text-lg md:text-xl line-animation">
+                  <li>Clean, modern, and mobile-first design</li>
+                  <li>Personalized solutions tailored to your business</li>
+                  <li>Proven results in performance and user experience</li>
+                  <li>Cost-effective pricing</li>
+                </ul>
+              </div>
             </div>
           </section>
 
           <!-- Services Section -->
           <section
-            class="mx-auto h-full mb-32 md:mb-40"
+            class="mx-auto h-full mb-32 md:mb-40 trigger-line-animation"
             id="services"
             aria-label="services-section"
           >
-            <h2 class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500">
-              Services.
-            </h2>
-
+            <div class="w-fit overflow-hidden leading-none">
+              <h2
+                class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500 line-animation"
+              >
+                Services.
+              </h2>
+            </div>
             <div
-              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-4 flex-wrap h-auto"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-4 flex-wrap h-auto trigger-line-animation"
               id="services-container"
             >
               <!-- Services are loaded here -->
@@ -188,12 +197,20 @@
           </section>
 
           <!-- Contact Section -->
-          <section class="flex flex-col" id="contact" aria-label="contact-section">
-            <h2 class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500">
+          <section
+            class="flex flex-col trigger-line-animation"
+            id="contact"
+            aria-label="contact-section"
+          >
+            <h2
+              class="sm:text-6xl text-4xl font-bold mb-6 underline decoration-purple-500 line-animation"
+            >
               Contact.
             </h2>
 
-            <div class="px-4 sm:flex w-full sm:items-center sm:justify-between gap-5">
+            <div
+              class="px-4 sm:flex w-full sm:items-center sm:justify-between gap-5 line-animation"
+            >
               <form action="#" class="space-y-8 mb-4 w-full sm:w-1/2" id="contact-form">
                 <div class="mb-5">
                   <label for="name" class="block mb-2 text-sm font-medium text-gray-900"
@@ -296,18 +313,22 @@
 
         <!-- Footer -->
         <footer
-          class="p-4 bg-white sm:p-6 border border-t-purple-200"
+          class="p-4 bg-purple-500 text-white sm:p-6 border border-t-purple-200 trigger-line-animation"
           id="footer"
           aria-label="footer-section"
         >
           <div class="mx-auto max-w-screen-xl">
             <div class="sm:flex sm:gap-3.5 sm:justify-between">
-              <div class="mb-6 md:mb-0">
-                <a href="#header" class="flex items-center">
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap"> IntWell</span>
+              <div class="mb-6 md:mb-0 w-fit overflow-hidden">
+                <a href="/" class="w-fit overflow-hidden flex items-center line-animation">
+                  <img
+                    src="./icons/intwell_logo.png"
+                    alt="Intwell Web Development Logo"
+                    width="120"
+                  />
                 </a>
               </div>
-              <div class="w-full sm:w-96 mb-5 sm:mb-0">
+              <div class="w-fit overflow-hidden sm:w-96 mb-5 sm:mb-0">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.1591577576455!2d77.72802807436925!3d29.453362475226633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1b002726e857%3A0x22ac890be61f9dd4!2sAmit%20vihar%20kukra.%20Muzaffarnagar!5e0!3m2!1sen!2sin!4v1746783412627!5m2!1sen!2sin"
                   width="100%"
@@ -316,38 +337,48 @@
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
+                  class="line-animation"
                 ></iframe>
               </div>
               <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                <div>
-                  <h3 class="mb-6 text-sm font-semibold uppercase">Address</h3>
-                  <address class="text-gray-600 not-italic">
-                    143 Top Floor, <br />
-                    Roorkee Road, <br />
-                    Muzaffarnagar - 251001 <br />
-                    Uttar Pradesh India
+                <div class="w-fit overflow-hidden">
+                  <div class="w-fit overflow-hidden">
+                    <h3 class="mb-6 text-sm font-semibold uppercase line-animation">Address</h3>
+                  </div>
+
+                  <address class="text-white not-italic w-fit overflow-hidden">
+                    <div class="line-animation">
+                      143 Top Floor, <br />
+                      Roorkee Road, <br />
+                      Muzaffarnagar - 251001 <br />
+                      Uttar Pradesh India
+                    </div>
                   </address>
                 </div>
                 <div>
-                  <h3 class="mb-6 text-sm font-semibold uppercase">Contact</h3>
-                  <ul class="text-gray-600">
-                    <li class="mb-4">
+                  <div class="w-fit overflow-hidden">
+                    <h3 class="mb-6 text-sm font-semibold uppercase line-animation">Contact</h3>
+                  </div>
+                  <ul class="text-white w-fit overflow-hidden">
+                    <li class="mb-4 line-animation">
                       <a href="mailto:intwelldevelopment@gmail.com" class="hover:underline"
                         >intwelldevelopment<br />@gmail.com</a
                       >
                     </li>
-                    <li>
+                    <li class="line-animation">
                       <a href="tel:+91 8791473908" class="hover:underline">+91 8791473908</a>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h3 class="mb-6 text-sm font-semibold uppercase">Legal</h3>
-                  <ul class="text-gray-600">
-                    <li class="mb-4">
+                  <div class="w-fit overflow-hidden">
+                    <h3 class="mb-6 text-sm font-semibold uppercase line-animation">Legal</h3>
+                  </div>
+                  <ul class="text-white w-fit overflow-hidden">
+                    <li class="mb-4 line-animation">
                       <a href="#" class="hover:underline">Privacy Policy</a>
                     </li>
-                    <li>
+                    <li class="line-animation">
                       <a href="#" class="hover:underline">Terms &amp; Conditions</a>
                     </li>
                   </ul>
@@ -356,8 +387,8 @@
             </div>
 
             <hr class="my-6 border-purple-200 sm:mx-auto lg:my-8" />
-            <div class="sm:flex sm:items-center sm:justify-between">
-              <span class="text-sm text-gray-500 sm:text-center"
+            <div class="sm:flex sm:items-center sm:justify-between w-fit overflow-hidden">
+              <span class="text-sm text-white sm:text-center line-animation"
                 >© 2025 <a href="#hero" class="hover:underline">IntWell™</a>. All Rights Reserved.
               </span>
             </div>
