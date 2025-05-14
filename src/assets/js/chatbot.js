@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Process message with AI (mock for now)
+  // Process message with AI
   async function processWithAI(message) {
     try {
       const response = await fetch('https://intwell-backend.vercel.app/chat', {
