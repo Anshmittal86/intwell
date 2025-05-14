@@ -442,6 +442,9 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -736,6 +739,11 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+  .md\:px-7 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 7);
+    }
+  }
   .md\:text-3xl {
     @media (width >= 48rem) {
       font-size: var(--text-3xl);
@@ -768,6 +776,11 @@
       justify-content: space-between;
     }
   }
+  .lg\:px-10 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 10);
+    }
+  }
   .dark\:text-white {
     @media (prefers-color-scheme: dark) {
       color: var(--color-white);
@@ -782,6 +795,10 @@
   --text-dark: #1e293b;
   --bg-light: #ffffff;
   --bg-gray: #f1f5f9;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-medium: 1.25rem;
+  --font-large: 1.5rem;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
@@ -812,7 +829,7 @@ nav .mobile-menu {
     backdrop-filter: blur(5px);
     color: #222;
     padding: 5rem 2rem 2rem;
-    font-size: 1.5rem;
+    font-size: var(--font-large);
     backdrop-filter: blur(5px);
     transform: translateX(100%);
   }
@@ -839,7 +856,8 @@ nav .mobile-menu {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -854,7 +872,7 @@ nav .mobile-menu {
 .chat-header {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: 15px 20px;
+  padding: 18px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -866,17 +884,28 @@ nav .mobile-menu {
   gap: 10px;
 }
 .header-title img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header-title span {
+  font-size: var(--font-medium);
+}
+.header-title img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+}
+.header-buttons {
+  display: flex;
+  gap: 20px;
 }
 .header-buttons button {
   background: none;
   border: none;
   color: var(--text-light);
   cursor: pointer;
-  font-size: 16px;
-  margin-left: 10px;
+  font-size: var(--font-large);
 }
 .chat-body {
   height: 400px;
@@ -894,6 +923,8 @@ nav .mobile-menu {
   margin-bottom: 5px;
   position: relative;
   word-wrap: break-word;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.3s ease;
 }
 .user-message {
   background-color: var(--primary-light);
@@ -913,6 +944,7 @@ nav .mobile-menu {
   padding: 15px;
   background-color: var(--bg-light);
   border-top: 1px solid #e2e8f0;
+  gap: 10px;
 }
 .chat-input {
   flex: 1;
@@ -947,8 +979,8 @@ nav .mobile-menu {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   background-color: var(--primary-color);
   border-radius: 50%;
   display: flex;
@@ -1006,6 +1038,30 @@ nav .mobile-menu {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 480px) {
+  .chat-container {
+    right: 10px;
+    left: 10px;
+    width: auto;
+    max-height: 90vh;
+  }
+  .chat-body {
+    height: 300px;
+  }
+  .chat-input {
+    font-size: var(--font-sm);
   }
 }
 @property --tw-space-y-reverse {
