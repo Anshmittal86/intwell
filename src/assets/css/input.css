@@ -54,7 +54,6 @@ nav .mobile-menu {
     backdrop-filter: blur(5px);
     color: #222;
     padding: 5rem 2rem 2rem;
-    font-size: var(--font-large);
     backdrop-filter: blur(5px);
     transform: translateX(100%);
   }

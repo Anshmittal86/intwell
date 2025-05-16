@@ -150,7 +150,7 @@ function handleGsapAnimation() {
   });
 }
 
-handleSmoothScroll();
 handleGsapAnimation();
+handleSmoothScroll();
 getServices();
 validateForm();
