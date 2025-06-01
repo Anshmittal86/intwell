@@ -107,15 +107,10 @@ document.addEventListener('DOMContentLoaded', function () {
       eventSource.close(); // close old connection before starting a new one
       eventSource = null;
     }
-    eventSource = new EventSource('https://intwell-backend.vercel.app/sse');
-
-    console.log(eventSource);
+    eventSource = new EventSource('https://intwell-backend-production.up.railway.app/sse');
 
     eventSource.onmessage = (event) => {
-      console.log(event);
       const data = JSON.parse(event.data);
-
-      console.log(data);
 
       if (data.type === 'content_block_delta') {
         const text = data.delta?.text || '';
@@ -149,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Wait 100ms to ensure SSE connection is established
       await new Promise((resolve) => setTimeout(resolve, 100));
 
-      await fetch('https://intwell-backend.vercel.app/messages', {
+      await fetch('https://intwell-backend-production.up.railway.app/messages', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
