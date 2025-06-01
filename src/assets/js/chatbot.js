@@ -96,18 +96,31 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Process message with AI
+  // https://intwell-backend.vercel.app/chat
   async function processWithAI(message) {
     try {
-      const response = await fetch('https://intwell-backend.vercel.app/chat', {
+      const response = await fetch('https://intwell-backend.vercel.app/messages', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ prompt: message })
+        body: JSON.stringify({
+          type: 'message',
+          data: {
+            messages: [
+              {
+                role: 'user',
+                content: message
+              }
+            ]
+          }
+        })
       });
 
-      const text = await response.text();
-      addMessage(text, 'bot');
+      const data = await response.json();
+      const aiReply = data.reply;
+
+      addMessage(aiReply, 'bot');
     } catch (error) {
       console.error('Error communicating with AI backend:', error);
       addMessage('Oops! Something went wrong.', 'bot');
