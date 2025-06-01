@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
       eventSource.close(); // close old connection before starting a new one
       eventSource = null;
     }
-    eventSource = new EventSource('http://localhost:3000/sse');
+    eventSource = new EventSource('https://intwell-backend.vercel.app/sse');
 
     console.log(eventSource);
 
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Wait 100ms to ensure SSE connection is established
       await new Promise((resolve) => setTimeout(resolve, 100));
 
-      await fetch('http://localhost:3000/messages', {
+      await fetch('https://intwell-backend.vercel.app/messages', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
