@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
   //
   async function processWithAI(message) {
     try {
-      const response = await fetch('http://localhost:3000/chat', {
+      const response = await fetch('https://intwell-backend.vercel.app/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
