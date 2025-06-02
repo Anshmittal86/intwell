@@ -25,8 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Close chat
   closeChat.addEventListener('click', function () {
-    // Disconnect SSE
-    disconnectSSE();
     chatContainer.classList.add('hidden');
     chatBubble.classList.remove('hidden');
   });
@@ -97,54 +95,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  let eventSource = null;
-  let sseConnected = false;
-
-  function connectSSE() {
-    if (eventSource || sseConnected) return; // prevent multiple connections
-
-    if (eventSource) {
-      eventSource.close(); // close old connection before starting a new one
-      eventSource = null;
-    }
-    eventSource = new EventSource('https://intwell-backend-production.up.railway.app/sse');
-
-    eventSource.onmessage = (event) => {
-      const data = JSON.parse(event.data);
-
-      if (data.type === 'content_block_delta') {
-        const text = data.delta?.text || '';
-        addMessage(text, 'bot');
-      }
-    };
-
-    eventSource.onerror = (err) => {
-      console.error('SSE error:', err);
-      eventSource.close();
-      eventSource = null;
-      sseConnected = false;
-    };
-
-    sseConnected = true;
-  }
-
-  function disconnectSSE() {
-    if (eventSource) {
-      eventSource.close();
-      eventSource = null;
-      sseConnected = false;
-    }
-  }
-
   // Process message with AI
-  // https://intwell-backend.vercel.app/chat
+  //
   async function processWithAI(message) {
     try {
-      connectSSE();
-      // Wait 100ms to ensure SSE connection is established
-      await new Promise((resolve) => setTimeout(resolve, 100));
-
-      await fetch('https://intwell-backend-production.up.railway.app/messages', {
+      const response = await fetch('http://localhost:3000/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -161,8 +116,10 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         })
       });
+
+      const data = await response.text();
+      addMessage(data, 'bot');
     } catch (error) {
-      console.error('Error communicating with AI backend:', error);
       addMessage('Oops! Something went wrong.', 'bot');
     }
   }
