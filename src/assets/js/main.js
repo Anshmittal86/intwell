@@ -1,5 +1,3 @@
-import '../css/output.css';
-
 import './chatbot';
 
 const servicesContainerEl = document.querySelector('#services-container');
@@ -7,6 +5,20 @@ const mobileMenuIcon = document.querySelector('#mobile-menu');
 const navbarEl = document.querySelector('nav');
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+
+// Disable scrolling
+document.body.style.overflow = 'hidden';
+
+(function () {
+  const loader = document.querySelector('.loader-container');
+  //after window is loaded completely
+  window.onload = function () {
+    //hide the preloader
+    loader.style.display = 'none';
+    // Enable scrolling again
+    document.body.style.overflow = '';
+  };
+})();
 
 // Get Services
 async function getServices() {

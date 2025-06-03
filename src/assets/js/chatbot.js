@@ -1,5 +1,3 @@
-import '../css/output.css';
-
 document.addEventListener('DOMContentLoaded', function () {
   const chatBubble = document.getElementById('chatBubble');
   const chatContainer = document.getElementById('chatContainer');
@@ -36,6 +34,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // Send with button click
+  sendMessage.addEventListener('click', sendUserMessage);
+
+  // Send with Enter key
+  chatInput.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      sendUserMessage();
+    }
+  });
+
+  function playAudio() {
+    const audio = document.getElementById('audio');
+    audio.play();
+  }
   // Send message function
   function sendUserMessage() {
     const message = chatInput.value.trim();
@@ -51,17 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
       processWithAI(message);
     }
   }
-
-  // Send with button click
-  sendMessage.addEventListener('click', sendUserMessage);
-
-  // Send with Enter key
-  chatInput.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      sendUserMessage();
-    }
-  });
-
   // Add message to chat
   function addMessage(text, sender) {
     const messageDiv = document.createElement('div');
@@ -119,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       const data = await response.text();
       addMessage(data, 'bot');
+      playAudio();
     } catch (error) {
       addMessage('Oops! Something went wrong.', 'bot');
     }
